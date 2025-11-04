@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amore Mio - Primitivo IGP Puglia Riserva 2014</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Monsieur+La+Doulaise&display=swap');
         
         * {
             margin: 0;
@@ -42,10 +42,10 @@
         }
         
         .wine-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Monsieur La Doulaise', cursive;
             font-size: 72px;
-            font-weight: 300;
-            font-style: italic;
+            font-weight: 400;
+            font-style: normal;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -321,6 +321,121 @@
             .page {
                 margin: 0;
                 box-shadow: none;
+            }
+        }
+        
+        /* Mobile Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .page {
+                width: 100%;
+                margin: 0;
+            }
+            
+            .top-section {
+                flex-direction: column;
+            }
+            
+            .left-section {
+                width: 100%;
+                padding: 30px 20px;
+            }
+            
+            .wine-title {
+                font-size: 48px;
+            }
+            
+            .wine-subtitle {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+            
+            .container {
+                min-height: 400px;
+                position: relative;
+            }
+            
+            .bottle {
+                width: 50vw;
+                max-width: 300px;
+            }
+            
+            .award {
+                width: 35vw;
+                max-width: 200px;
+                padding-left: 20px;
+                padding-top: 20px;
+            }
+            
+            .barcode {
+                width: 120px;
+                padding-left: 20px;
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .right-section {
+                width: 100%;
+                padding: 30px 20px;
+                border-left: none;
+                border-top: 4px solid #8b0000;
+            }
+            
+            .price-tag {
+                position: relative;
+                right: auto;
+                top: auto;
+                margin: 20px auto;
+                display: inline-block;
+                border-radius: 5px;
+            }
+            
+            .price-tag:before {
+                display: none;
+            }
+            
+            .price-tag:after {
+                display: none;
+            }
+            
+            .bottom-section {
+                padding: 30px 20px;
+            }
+            
+            .bottom-title {
+                font-size: 36px;
+                letter-spacing: 4px;
+            }
+            
+            .restaurant-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px 20px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .bottle {
+                width: 45vw;
+                max-width: 250px;
+            }
+            
+            .award {
+                width: 30vw;
+                max-width: 150px;
+                padding-left: 10px;
+                padding-top: 15px;
+            }
+            
+            .barcode {
+                width: 100px;
+                padding-left: 10px;
+            }
+            
+            .container {
+                min-height: 350px;
+            }
+            
+            .restaurant-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
