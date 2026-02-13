@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amore Mio - Primitivo IGP Puglia Riserva 2014</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Monsieur+La+Doulaise&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Montserrat', sans-serif;
             background: #f5f5f5;
         }
-        
+
         .page {
             width: 1200px;
             min-height: 100vh;
             background: white;
             margin: 20px auto;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             position: relative;
             padding-bottom: 80px;
         }
-        
+
         /* Top Section Styles */
         .top-section {
             display: flex;
         }
-        
+
         .left-section {
             width: 55%;
             padding: 60px;
@@ -40,7 +41,7 @@
             flex-direction: column;
             align-items: center;
         }
-        
+
         .wine-title {
             font-family: 'Monsieur La Doulaise', cursive;
             font-size: 72px;
@@ -49,14 +50,14 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        
+
         .wine-subtitle {
             font-size: 18px;
             letter-spacing: 3px;
             margin-bottom: 40px;
             text-align: center;
         }
-        
+
         .container {
             position: relative;
             width: 100%;
@@ -65,7 +66,7 @@
             align-items: flex-start;
             justify-content: flex-start;
         }
-        
+
         .awards {
             position: relative;
             width: 100%;
@@ -73,7 +74,7 @@
             align-items: flex-start;
             justify-content: flex-start;
         }
-        
+
         .bottle-container {
             position: relative;
             display: flex;
@@ -81,13 +82,13 @@
             justify-content: flex-start;
             z-index: 1;
         }
-        
+
         .bottle {
             width: 70vh;
             height: auto;
             max-width: 100%;
         }
-        
+
         .award-badge {
             position: absolute;
             top: 0;
@@ -97,7 +98,7 @@
             align-items: flex-start;
             justify-content: flex-end;
         }
-        
+
         .award {
             padding-left: 40px;
             padding-top: 30px;
@@ -105,7 +106,7 @@
             height: auto;
             max-width: 100%;
         }
-        
+
         .barcode {
             padding-left: 40px;
             position: absolute;
@@ -115,66 +116,66 @@
             height: auto;
             z-index: 3;
         }
-        
+
         .right-section {
             width: 45%;
             background: white;
             padding: 60px 50px;
             border-left: 4px solid #8b0000;
         }
-        
+
         .location-header {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-bottom: 30px;
         }
-        
+
         .location-icon {
             width: 30px;
             height: 30px;
         }
-        
+
         .region-name {
             font-size: 24px;
             font-weight: 300;
             color: #666;
         }
-        
+
         .grape-icon {
             width: 30px;
             height: 30px;
         }
-        
+
         .grape-name {
             font-size: 20px;
             color: #666;
         }
-        
+
         .map-container {
             text-align: right;
             margin-bottom: 30px;
         }
-        
+
         .italy-map {
             width: 100%;
             height: auto;
         }
-        
+
         .section-title {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 15px;
             color: #333;
         }
-        
+
         .section-content {
             font-size: 13px;
             line-height: 1.8;
             color: #444;
             margin-bottom: 30px;
         }
-        
+
         .price-tag {
             position: absolute;
             right: 50px;
@@ -185,9 +186,9 @@
             font-size: 32px;
             font-weight: 600;
             border-radius: 5px 0 0 5px;
-            box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         .price-tag:before {
             content: '';
             position: absolute;
@@ -199,7 +200,7 @@
             border-width: 31px 20px 31px 0;
             border-color: transparent #8b0000 transparent transparent;
         }
-        
+
         .price-tag:after {
             content: '';
             position: absolute;
@@ -211,24 +212,24 @@
             background: white;
             border-radius: 50%;
         }
-        
+
         .key-reasons {
             background: #f9f9f9;
             padding: 20px;
             border-radius: 5px;
             margin-bottom: 20px;
         }
-        
+
         .key-reasons h3 {
             text-align: center;
             font-size: 18px;
             margin-bottom: 15px;
         }
-        
+
         .key-reasons ul {
             list-style: none;
         }
-        
+
         .key-reasons li {
             font-size: 12px;
             line-height: 1.8;
@@ -236,29 +237,29 @@
             position: relative;
             margin-bottom: 5px;
         }
-        
+
         .key-reasons li:before {
             content: '-';
             position: absolute;
             left: 0;
         }
-        
+
         .support {
             background: #f9f9f9;
             padding: 20px;
             border-radius: 5px;
         }
-        
+
         .support h3 {
             text-align: center;
             font-size: 18px;
             margin-bottom: 15px;
         }
-        
+
         .support ul {
             list-style: none;
         }
-        
+
         .support li {
             font-size: 12px;
             line-height: 1.8;
@@ -266,13 +267,13 @@
             position: relative;
             margin-bottom: 5px;
         }
-        
+
         .support li:before {
             content: '-';
             position: absolute;
             left: 0;
         }
-        
+
         /* Divider */
         .divider {
             width: 100%;
@@ -280,12 +281,12 @@
             background: linear-gradient(to right, transparent, #8b0000, transparent);
             margin: 60px 0;
         }
-        
+
         /* Bottom Section Styles */
         .bottom-section {
             padding: 40px 100px 80px;
         }
-        
+
         .bottom-title {
             font-size: 64px;
             text-align: center;
@@ -294,92 +295,93 @@
             font-weight: 300;
             color: #333;
         }
-        
+
         .restaurant-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 60px 40px;
             align-items: center;
         }
-        
+
         .restaurant-logo {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .restaurant-logo img {
             max-width: 100%;
             max-height: 100px;
             object-fit: contain;
         }
-        
+
         @media print {
             body {
                 background: #ffffff;
             }
+
             .page {
                 margin: 0;
                 box-shadow: none;
             }
         }
-        
+
         /* Mobile Responsive Styles */
         @media screen and (max-width: 768px) {
             .page {
                 width: 100%;
                 margin: 0;
             }
-            
+
             .top-section {
                 flex-direction: column;
             }
-            
+
             .left-section {
                 width: 100%;
                 padding: 30px 20px;
             }
-            
+
             .wine-title {
                 font-size: 48px;
             }
-            
+
             .wine-subtitle {
                 font-size: 14px;
                 letter-spacing: 2px;
             }
-            
+
             .container {
                 min-height: 400px;
                 position: relative;
             }
-            
+
             .bottle {
                 width: 50vw;
                 max-width: 300px;
             }
-            
+
             .award {
                 width: 35vw;
                 max-width: 200px;
                 padding-left: 20px;
                 padding-top: 20px;
             }
-            
+
             .barcode {
                 width: 120px;
                 padding-left: 20px;
                 bottom: 10px;
                 right: 10px;
             }
-            
+
             .right-section {
                 width: 100%;
                 padding: 30px 20px;
                 border-left: none;
                 border-top: 4px solid #8b0000;
             }
-            
+
             .price-tag {
                 position: relative;
                 right: auto;
@@ -388,58 +390,59 @@
                 display: inline-block;
                 border-radius: 5px;
             }
-            
+
             .price-tag:before {
                 display: none;
             }
-            
+
             .price-tag:after {
                 display: none;
             }
-            
+
             .bottom-section {
                 padding: 30px 20px;
             }
-            
+
             .bottom-title {
                 font-size: 36px;
                 letter-spacing: 4px;
             }
-            
+
             .restaurant-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px 20px;
             }
         }
-        
+
         @media screen and (max-width: 480px) {
             .bottle {
                 width: 45vw;
                 max-width: 250px;
             }
-            
+
             .award {
                 width: 30vw;
                 max-width: 150px;
                 padding-left: 10px;
                 padding-top: 15px;
             }
-            
+
             .barcode {
                 width: 100px;
                 padding-left: 10px;
             }
-            
+
             .container {
                 min-height: 350px;
             }
-            
+
             .restaurant-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="page">
         <!-- Top Section (Original Page 1) -->
@@ -448,53 +451,60 @@
                 <h1 class="wine-title">Amore Mio</h1>
                 <div class="wine-subtitle">PRIMITIVO IGP PUGLIA RISERVA 2014</div>
                 <div class="container">
-                <div class="awards">
-                    <div class="bottle-container">
-                        <img src="wine.png" alt="Amore Mio Wine Bottle" class="bottle">
+                    <div class="awards">
+                        <div class="bottle-container">
+                            <img src="wine.png" alt="Amore Mio Wine Bottle" class="bottle">
+                        </div>
+                        <div class="award-badge">
+                            <img src="gold.png" alt="Awards" class="award">
+                        </div>
                     </div>
-                    <div class="award-badge">
-                        <img src="gold.png" alt="Awards" class="award">
-                    </div>
-                </div>
-                <img src="barcode.png" alt="Barcode" class="barcode">
+                    <img src="barcode.png" alt="Barcode" class="barcode">
                 </div>
             </div>
-            
+
             <div class="right-section">
-                
+
                 <div class="map-container">
                     <img src="map.png" alt="Italy Map" class="italy-map">
                 </div>
-                
+
                 <div class="section-title">Origin</div>
                 <div class="section-content">
-                    Born in the hills of Gravina in Puglia, a historic town whose name derives from the Latin "Grana dat Vina" – meaning "gives grain and wine." Emperor Frederick II once called it a true "garden of delights." Cantine Fiore, established in 1868, is the oldest winemaking estate in Puglia. Located at 450–550m above sea level across 64 hectares, it benefits from karst-rich soils, temperate climate, and high elevation, which lend depth, intensity, and minerality to the wine.
+                    Born in the hills of Gravina in Puglia, a historic town whose name derives from the Latin "Grana dat
+                    Vina" – meaning "gives grain and wine." Emperor Frederick II once called it a true "garden of
+                    delights." Cantine Fiore, established in 1868, is the oldest winemaking estate in Puglia. Located at
+                    450–550m above sea level across 64 hectares, it benefits from karst-rich soils, temperate climate,
+                    and high elevation, which lend depth, intensity, and minerality to the wine.
                 </div>
-                
+
                 <div class="section-title">Accolades</div>
                 <div class="section-content">
                     93 Points Bronze Medal Decanter World Wine Awards<br>
                     2025 Gold and Silver Medals Concours Mondial de Bruxelles 2025
                 </div>
-                
+
                 <div class="section-title">Tasting Notes</div>
                 <div class="section-content">
-                    Deep ruby red with violet reflections. The nose opens with mature wild berries (blackberry, currant, plum), earthy forest floor, and balsamic hints. On the palate, it is bold yet silky, with a long, elegant finish of dark fruit and sweet spices.<br><br>
+                    Deep ruby red with violet reflections. The nose opens with mature wild berries (blackberry, currant,
+                    plum), earthy forest floor, and balsamic hints. On the palate, it is bold yet silky, with a long,
+                    elegant finish of dark fruit and sweet spices.<br><br>
                     Perfect Pairing:<br>
                     Red meats, game, aged cheeses, and structured dishes.
                 </div>
-                
+
                 <div class="price-tag">$45</div>
-                
+
                 <div class="key-reasons">
                     <h3>Key Reasons to Believe</h3>
                     <ul>
                         <li>150+ year legacy from Puglia's oldest estate</li>
-                        <li>High-altitude vineyards produce exceptional Primitivo-Multi-award winning with global acclaim in 2025</li>
+                        <li>High-altitude vineyards produce exceptional Primitivo-Multi-award winning with global
+                            acclaim in 2025</li>
                         <li>Deep tradition meets modern winemaking finesse</li>
                     </ul>
                 </div>
-                
+
                 <div class="support">
                     <h3>Support</h3>
                     <ul>
@@ -505,68 +515,69 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Divider -->
         <div class="divider"></div>
-        
+
         <!-- Bottom Section (Original Page 2) -->
         <div class="bottom-section">
             <h2 class="bottom-title">Proudly Served At</h2>
-            
+
             <div class="restaurant-grid">
                 <!-- Row 1 -->
                 <div class="restaurant-logo">
                     <img src="strada.png" alt="La Strada Italian Kitchen & Bar">
                 </div>
-                
+
                 <div class="restaurant-logo">
                     <img src="steak.png" alt="Sexy Steak Detroit">
                 </div>
-                
+
                 <div class="restaurant-logo">
                     <img src="aurora.png" alt="Aurora">
                 </div>
-                
+
                 <!-- Row 2 -->
                 <div class="restaurant-logo">
                     <img src="cantoro.png" alt="Scantoro Italian Market">
                 </div>
-                
+
                 <div class="restaurant-logo">
-                    <img src="prime.png" alt="Prime29">
+                    <img src="adelina.png" alt="Adelina">
                 </div>
-                
+
                 <div class="restaurant-logo">
                     <img src="nara.png" alt="Nara Sushi & Hibachi Steakhouse">
                 </div>
-                
+
                 <!-- Row 3 -->
                 <div class="restaurant-logo">
                     <img src="antica.png" alt="Antica Nova">
                 </div>
-                
+
                 <div class="restaurant-logo">
-                    <img src="collina.png" alt="La Collina">
+                    <img src="prime.png" alt="Prime29">
                 </div>
-                
+
                 <div class="restaurant-logo">
                     <img src="salvatore.png" alt="Salvatore Scallopini">
                 </div>
-                
+
                 <!-- Row 4 -->
                 <div class="restaurant-logo">
-                    <img src="pao.png" alt="PAO">
+                    <img src="wine_chateau.png" alt="Wine Chateau">
                 </div>
-                
+
+                <div class="restaurant-logo">
+                    <img src="collina.png" alt="La Collina">
+                </div>
+
                 <div class="restaurant-logo">
                     <img src="vino_lab.png" alt="Vino Lab">
-                </div>
-                
-                <div class="restaurant-logo">
-                    <!-- Empty cell for spacing -->
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
